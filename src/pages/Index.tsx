@@ -5,6 +5,7 @@ import Fleet from '@/components/Fleet';
 import TourPackages from '@/components/TourPackages';
 import Contact from '@/components/Contact';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import BookingSystem from '@/components/BookingSystem';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <BookingSystem />
         <Services />
         <Fleet />
         <TourPackages />

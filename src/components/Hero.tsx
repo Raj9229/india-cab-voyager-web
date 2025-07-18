@@ -1,5 +1,6 @@
 import { MapPin, Clock, Shield, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 import heroImage from '@/assets/varanasi-hero.jpg';
 
 const Hero = () => {
@@ -17,7 +18,12 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto animate-fade-in">
+        <motion.div 
+          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-2">
@@ -92,7 +98,7 @@ const Hero = () => {
               <div className="text-sm text-white/70">Rated Service</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
